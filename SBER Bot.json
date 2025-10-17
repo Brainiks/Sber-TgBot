@@ -1,0 +1,1505 @@
+{
+  "name": "Bot",
+  "nodes": [
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ $json.callback_query.data }}",
+                    "rightValue": "Проекты без обновления более 6 дней",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    },
+                    "id": "faf2b0e3-d514-434a-87ec-505fd4b64e1f"
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "3dc28c9f-22b6-4345-a9d8-1885c94de4b0",
+                    "leftValue": "={{ $json.callback_query.data }}",
+                    "rightValue": "Проект без руководителя",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "e1c4f9c6-aafb-446d-a382-d3911763b0c0",
+                    "leftValue": "={{ $json.callback_query.data }}",
+                    "rightValue": "Что ты можешь?",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "0986bd7a-8619-4a1a-b56e-d34980ab4cda",
+                    "leftValue": "={{ $json.message.text }}",
+                    "rightValue": "/start",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "87077e79-bf63-49ec-9e69-2cd06972421a",
+                    "leftValue": "={{ $json.callback_query.data }}",
+                    "rightValue": "Проекты",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "b6a096f7-3f25-470d-b66e-5cdfd8b6cdd2",
+                    "leftValue": "={{ $json.callback_query.data }}",
+                    "rightValue": "back",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "0534aa20-73c0-485b-8c03-a331ec9b030c",
+                    "leftValue": "={{ $json.callback_query.data }}",
+                    "rightValue": "see",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "3c719a4f-a751-44cb-8488-45022e40859d",
+                    "leftValue": "={{ $json.callback_query.data }}",
+                    "rightValue": "coment",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "ddef6ab2-f98d-453d-b97e-a7a9c23ebcf1",
+                    "leftValue": "={{ $json.message.text }}",
+                    "rightValue": "=^(\\d+)\\s+(.+)$",
+                    "operator": {
+                      "type": "string",
+                      "operation": "regex"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3.2,
+      "position": [
+        464,
+        -1520
+      ],
+      "id": "562def88-abab-4bd5-85bc-a14ca3487615",
+      "name": "Switch2"
+    },
+    {
+      "parameters": {
+        "url": "https://uni-corp.kaiten.ru/api/latest/cards",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpBearerAuth",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1136,
+        -1776
+      ],
+      "id": "1159a639-5e24-413e-bb23-c5f997efdaae",
+      "name": "HTTP Request8",
+      "credentials": {
+        "httpBearerAuth": {
+          "id": "fTmZQmnogSITW7ti",
+          "name": "Bearer Auth account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "url": "https://uni-corp.kaiten.ru/api/latest/cards",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpBearerAuth",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1232,
+        -1984
+      ],
+      "id": "bcadd145-b170-44be-b56a-934d374e60dc",
+      "name": "HTTP Request9",
+      "credentials": {
+        "httpBearerAuth": {
+          "id": "fTmZQmnogSITW7ti",
+          "name": "Bearer Auth account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "updates": [
+          "inline_query",
+          "callback_query",
+          "message"
+        ],
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.telegramTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        80,
+        -1408
+      ],
+      "id": "1f1cf9d7-bc4a-4ebf-8cbb-a0221a5e27a5",
+      "name": "Telegram Trigger1",
+      "webhookId": "0daff161-0abd-4237-8b5d-6e0cf27318c8",
+      "credentials": {
+        "telegramApi": {
+          "id": "0QpnzYE6bTgMsJ5Z",
+          "name": "Telegram account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "url": "https://uni-corp.kaiten.ru/api/latest/cards",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpBearerAuth",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1184,
+        -1328
+      ],
+      "id": "65af7d8e-4c18-4267-95bc-81d6907a4ac2",
+      "name": "HTTP Request12",
+      "credentials": {
+        "httpBearerAuth": {
+          "id": "fTmZQmnogSITW7ti",
+          "name": "Bearer Auth account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "// Loop over input items and filter/process them\nconst filteredItems = [];\n\nfor (const item of $input.all()) {\n  const card = item.json;\n  const columnTitle = card?.column?.parent?.title;\n  const typeName = card?.type?.name;\n  const deadline = card?.properties?.id_425319?.date;\n  const archive = card?.archived;\n\n\n  const idToStatus = {\n  225412: \"100% достижения\",\n  225413: \"Выполнение не полностью\",\n  225414: \"Не будет достигнута\",\n  228677: \"Цель достигнута\",\n  16182152: \"Не актуально\"\n  };\n  const prop_id = card?.properties?.id_434830;\n  const prop_status = idToStatus[prop_id];\n  \n  \n  let isDateValid = true;\n  if (deadline) {\n    const targetDate = new Date(deadline.split('.').reverse().join('-'));\n    const currentDate = new Date();\n    targetDate.setHours(0, 0, 0, 0);\n    currentDate.setHours(0, 0, 0, 0);\n    const diffDays = Math.ceil(Math.abs(currentDate - targetDate) / (1000 * 60 * 60 * 24));\n    isDateValid = diffDays >= 6;\n  }\n\n  const isValidItem = (columnTitle === \"Q1\" || columnTitle === \"Год\") && (typeName === \"Цель\" || typeName === \"Objectives\")&& archive === false && (prop_status === \"Выполнение не полностью\" || prop_status === \"Не будет достигнута\");\n  if (isValidItem) {\n    filteredItems.push(item);\n  }\n}\n\n// Преобразуем отфильтрованные элементы в единый текст\nlet resultText = '';\n\nfor (const item of filteredItems) {\n  const card = item.json;\n  const identity = card.id\n  const title = card?.title || 'Без названия';\n  const statusInfo = card?.properties?.id_423362 !== undefined ? card.properties.id_423362 : 'Не указан';\n  const smile = card?.type?.letter;\n  \n  \n  let membersInfo = '';\n  if (card?.members && Array.isArray(card.members)) {\n    const membersNames = [];\n    for (const member of card.members) {\n      if (member?.type === 2) {\n        const name = member?.full_name;\n        if (name && name !== 'Нет ответственного') {\n          membersNames.push(name);\n        }\n      }\n    }\n    if (membersNames.length > 0) {\n      membersInfo = `<b>Ответсвенный:</b> ${membersNames.join(', ')}\\n`;\n    }\n  } else {\n    membersInfo = `Ответственный не назначен\\n`;\n  }\n\n  let tagsInfo = '';\n  if (card?.tags && Array.isArray(card.tags)) {\n    const tagNames = [];\n    for (const tag of card.tags) {\n      if (tag?.name) {\n        tagNames.push(tag.name);\n      }\n    }\n    if (tagNames.length > 0) {\n      tagsInfo = `Теги: ${tagNames.join(', ')}\\n`;\n    }\n  } else {\n    tagsInfo = `Теги: Нет тегов\\n`;\n  }\n\n  const deadline = card?.properties?.id_425319?.date;\n  const cardUrl = `https://uni-corp.kaiten.ru/space/385711/grid/card/${identity}?group_by=board&order_by=lane%2Ccolumn&order_direction=asc%2Casc`;\n  const line = card?.lane?.title;\n  const time = card?.column?.parent?.title;\n  const type = card?.column?.title;\n\n  const idToStatus = {\n  225412: \"100% достижения\",\n  225413: \"Выполнение не полностью\",\n  225414: \"Не будет достигнута\",\n  228677: \"Цель достигнута\",\n  16182152: \"Не актуально\"\n  };\n  const prop_id = card?.properties?.id_434830;\n  \n\n  resultText += `<b>Название проекта:</b> <a href=\"${cardUrl}\">${smile}${title}</a>\\n`;\n  resultText += `<b>Описание статуса:</b> ${statusInfo}\\n`;\n  resultText += `${membersInfo}`;\n  resultText += `<b>${tagsInfo}</b>`;\n  resultText += `<b>Прогноз достижения:</b> ${idToStatus[prop_id]}\\n`;\n  resultText += `<b>Дорожка:</b> ${line}\\n`;\n  resultText += `<b>Колонка:</b> ${time}|${type}\\n`;\n  resultText += `<b>Последнее изменение статуса:</b> ${deadline}\\n`;\n  resultText += `------------------------------------\\n`;\n  \n}\nlet count = filteredItems.length;\n\n\n// Применяем результат к каждому элементу\nfor (const item of $input.all()) {\n  if (!resultText || resultText.trim() === '') {\n  // Если пустая, то задаём начальное значение\n  resultText += `✅Все проекты имеют высокий шанс на успех или завершены✅\\n\\nПоказать список этих проектов?`; // или любая другая строка по умолчанию\n}\n  item.json.counter = count;\n  item.json.result = resultText;\n}\n\nreturn $input.all();"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1392,
+        -1344
+      ],
+      "id": "dc54bfee-6527-4483-a12a-aa3d34c46bc5",
+      "name": "Code22"
+    },
+    {
+      "parameters": {
+        "url": "https://uni-corp.kaiten.ru/api/latest/cards",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpBearerAuth",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1184,
+        -976
+      ],
+      "id": "f6e2dedc-f35b-4053-a32f-5a82f9b29c45",
+      "name": "HTTP Request13",
+      "credentials": {
+        "httpBearerAuth": {
+          "id": "fTmZQmnogSITW7ti",
+          "name": "Bearer Auth account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "// Loop over input items and filter/process them\nconst filteredItems = [];\n\nfor (const item of $input.all()) {\n  const card = item.json;\n  const columnTitle = card?.column?.parent?.title;\n  const typeName = card?.type?.name;\n  const deadline = card?.properties?.id_425319?.date;\n  const archive = card?.archived;\n  \n  let isDateValid = true;\n  if (deadline) {\n    const targetDate = new Date(deadline.split('.').reverse().join('-'));\n    const currentDate = new Date();\n    targetDate.setHours(0, 0, 0, 0);\n    currentDate.setHours(0, 0, 0, 0);\n    const diffDays = Math.ceil(Math.abs(currentDate - targetDate) / (1000 * 60 * 60 * 24));\n    isDateValid = diffDays >= 6;\n  }\n\n  const isValidItem = (columnTitle === \"Q1\" || columnTitle === \"Год\") && (typeName === \"Цель\" || typeName === \"Objectives\")  && archive === false;\n  if (isValidItem) {\n    filteredItems.push(item);\n  }\n}\n\n// Преобразуем отфильтрованные элементы в единый текст\nlet resultText = '';\n\nfor (const item of filteredItems) {\n  const card = item.json;\n  const identity = card.id\n  const title = card?.title || 'Без названия';\n  const statusInfo = card?.properties?.id_423362 !== undefined ? card.properties.id_423362 : 'Не указан';\n  const smile = card?.type?.letter;\n  \n  \n  let membersInfo = '';\n  if (card?.members && Array.isArray(card.members)) {\n    const membersNames = [];\n    for (const member of card.members) {\n      if (member?.type === 2) {\n        const name = member?.full_name;\n        if (name && name !== 'Нет ответственного') {\n          membersNames.push(name);\n        }\n      }\n    }\n    if (membersNames.length > 0) {\n      membersInfo = `<b>Ответсвенный:</b> ${membersNames.join(', ')}\\n`;\n    }\n  } else {\n    membersInfo = `Ответственный не назначен\\n`;\n  }\n\n  let tagsInfo = '';\n  if (card?.tags && Array.isArray(card.tags)) {\n    const tagNames = [];\n    for (const tag of card.tags) {\n      if (tag?.name) {\n        tagNames.push(tag.name);\n      }\n    }\n    if (tagNames.length > 0) {\n      tagsInfo = `Теги: ${tagNames.join(', ')}\\n`;\n    }\n  } else {\n    tagsInfo = `Теги: Нет тегов\\n`;\n  }\n\n  const deadline = card?.properties?.id_425319?.date;\n  const line = card?.lane?.title;\n  const time = card?.column?.parent?.title;\n  const type = card?.column?.title;\n\n  const idToStatus = {\n  225412: \"100% достижения\",\n  225413: \"Выполнение не полностью\",\n  225414: \"Не будет достигнута\",\n  228677: \"Цель достигнута\",\n  16182152: \"Не актуально\"\n  };\n  const prop_id = card?.properties?.id_434830;\n  const ident = card?.id;\n\n  const cardUrl = `https://uni-corp.kaiten.ru/space/385711/grid/card/${identity}?group_by=board&order_by=lane%2Ccolumn&order_direction=asc%2Casc`;\n\n  resultText += `<b>Название проекта:</b> <a href=\"${cardUrl}\">${smile}${title}</a>\\n`;\n  resultText += `<b>ID карточки проекта: </b><code>${ident}</code>\\n`;\n  resultText += `<b>Описание статуса:</b> ${statusInfo}\\n`;\n  resultText += `${membersInfo}`;\n  resultText += `<b>${tagsInfo}</b>`;\n  resultText += `<b>Прогноз достижения:</b> ${idToStatus[prop_id]}\\n`;\n  resultText += `<b>Дорожка:</b> ${line}\\n`;\n  resultText += `<b>Колонка:</b> ${time}|${type}\\n`;\n  resultText += `<b>Последнее изменение статуса:</b> ${deadline}\\n`;\n  resultText += `------------------------------------\\n`;\n}\n\n\nlet count = filteredItems.length;\n\n// Применяем результат к каждому элементу\nfor (const item of $input.all()) {\n  \n  item.json.result = resultText;\n  item.json.counter = count;\n}\n\n\n\n\nreturn $input.all();"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1472,
+        -976
+      ],
+      "id": "038b2a10-eced-4e9a-8a51-53f8ade64a51",
+      "name": "Code23"
+    },
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ $json.counter }}",
+                    "rightValue": 0,
+                    "operator": {
+                      "type": "number",
+                      "operation": "equals"
+                    },
+                    "id": "aca6c52a-9aed-4d97-bfc1-c7b15309d784"
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "7e64ef2e-7ac2-42db-9cf6-fee41914c84a",
+                    "leftValue": "={{ $json.counter }}",
+                    "rightValue": 1,
+                    "operator": {
+                      "type": "number",
+                      "operation": "gte"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3.2,
+      "position": [
+        1696,
+        -1344
+      ],
+      "id": "5e6442d5-d9b4-4c38-bdb6-0f327d9b4db9",
+      "name": "Switch3"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://uni-corp.kaiten.ru/api/latest/cards/{{ $json.card_id }}/comments ",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpBearerAuth",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "text",
+              "value": "={{ $json.text }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1504,
+        -624
+      ],
+      "id": "bc9fd676-ca28-4083-b633-4071952479c1",
+      "name": "Post comment1",
+      "credentials": {
+        "httpBearerAuth": {
+          "id": "fTmZQmnogSITW7ti",
+          "name": "Bearer Auth account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "mode": "runOnceForEachItem",
+        "jsCode": "const [card_id, ...rest] = $json.message.text.split(' ');\nconst message = rest.join(' ');\n\n\n\n\n\n\n$input.item.json.card_id = card_id;\n$input.item.json.text = message;\n\nreturn $input.item;"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1168,
+        -624
+      ],
+      "id": "37039762-28cc-4c2b-b42c-809f0583ecd1",
+      "name": "Code25"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Loop over input items and filter them\nconst filteredItems = [];\n\nfor (const item of $input.all()) {\n  const card = item.json;\n  const columnTitle = card?.column?.parent?.title;\n  const typeName = card?.type?.name;\n  const archive = card?.archived;\n  \n  // Проверяем, что участников нет\n  const hasNoMembers = !card?.members || !Array.isArray(card.members) || card.members.length === 0;\n\n  const isValidItem = (columnTitle === \"Q1\" || columnTitle === \"Год\") && \n                      (typeName === \"Цель\" || typeName === \"Objectives\") &&\n                      hasNoMembers && archive === false;\n\n  if (isValidItem) {\n    filteredItems.push(item);\n  }\n}\n\n// Преобразуем отфильтрованные элементы в единый текст\nlet resultText = '';\n\nfor (const item of filteredItems) {\n  const card = item.json;\n  const title = card?.title || 'Без названия';\n  const statusInfo = card?.properties?.id_423362 !== undefined ? card.properties.id_423362 : 'Не указан';\n  const smile = card?.type?.letter || '';\n  const identity = card.id\n  const cardUrl = `https://uni-corp.kaiten.ru/space/385711/grid/card/${identity}?group_by=board&order_by=lane%2Ccolumn&order_direction=asc%2Casc`;\n  let tagsInfo = '';\n  if (card?.tags && Array.isArray(card.tags)) {\n    const tagNames = [];\n    for (const tag of card.tags) {\n      if (tag?.name) {\n        tagNames.push(tag.name);\n      }\n    }\n    if (tagNames.length > 0) {\n      tagsInfo = `Теги: ${tagNames.join(', ')}\\n`;\n    }\n  } else {\n    tagsInfo = `Теги: Нет тегов\\n`;\n  }\n  \n  const deadline = card?.properties?.id_425319?.date;\n  const line = card?.lane?.title;\n  const time = card?.column?.parent?.title;\n  const type = card?.column?.title;\n  const ident = card?.id;\n\n  const idToStatus = {\n  225412: \"100% достижения\",\n  225413: \"Выполнение не полностью\",\n  225414: \"Не будет достигнута\",\n  228677: \"Цель достигнута\",\n  16182152: \"Не актуально\"\n  };\n  const prop_id = card?.properties?.id_434830;\n\n\n\n  resultText += `<b>Название проекта:</b> <a href=\"${cardUrl}\">${smile}${title}</a>\\n`;\n  resultText += `<b>ID карточки проекта: </b><code>${ident}</code>\\n`;\n  resultText += `<b>Описание статуса:</b> ${statusInfo}\\n`;\n  resultText += `<b>${tagsInfo}</b>`;\n  resultText += `<b>Прогноз достижения:</b> ${idToStatus[prop_id]}\\n`;\n  resultText += `<b>Дорожка:</b> ${line}\\n`;\n  resultText += `<b>Колонка:</b> ${time}|${type}\\n`;\n  resultText += `<b>Последнее изменение статуса:</b> ${deadline}\\n`;\n  resultText += `------------------------------------\\n`;\n}\n\n\n\n\nlet count = filteredItems.length;\n\n// Применяем результат к каждому элементу\nfor (const item of $input.all()) {\n  \n  item.json.result = resultText;\n  item.json.counter = count;\n}\n\nreturn $input.all();"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1424,
+        -1776
+      ],
+      "id": "04b4c43d-2882-49bb-816d-3f61c07ed8ed",
+      "name": "Проверка на отсветсвенных"
+    },
+    {
+      "parameters": {
+        "chatId": "={{ $('Telegram Trigger1').item.json.callback_query.from.id }}",
+        "text": "=Готово",
+        "replyMarkup": "inlineKeyboard",
+        "inlineKeyboard": {
+          "rows": [
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "text": "Проекты без обновления более 6 дней",
+                    "additionalFields": {
+                      "callback_data": "Проекты без обновления более 6 дней"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "text": "Проекты без руководителей",
+                    "additionalFields": {
+                      "callback_data": "Проект без руководителя"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "text": "Проекты с плохим прогнозом достижения",
+                    "additionalFields": {
+                      "callback_data": "Проекты"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "text": "Оставить комментарий к карточке",
+                    "additionalFields": {
+                      "callback_data": "coment"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "text": "Что ты можешь?",
+                    "additionalFields": {
+                      "callback_data": "Что ты можешь?"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "additionalFields": {
+          "appendAttribution": false,
+          "parse_mode": "HTML"
+        }
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        1952,
+        -2016
+      ],
+      "id": "598b73c7-7703-43b6-9552-8085e35f6b83",
+      "name": "Send a text message",
+      "webhookId": "1eb0a016-e61c-4a2e-ab90-d490bd6120b2",
+      "executeOnce": true,
+      "credentials": {
+        "telegramApi": {
+          "id": "0QpnzYE6bTgMsJ5Z",
+          "name": "Telegram account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "// Loop over input items and filter/process them\nconst filteredItems = [];\n\nfor (const item of $input.all()) {\n  const card = item.json;\n  const columnTitle = card?.column?.parent?.title;\n  const typeName = card?.type?.name;\n  const deadline = card?.properties?.id_425319?.date;\n  const archive = card?.archived;\n  \n  let isDateValid = true;\n  if (deadline) {\n    const targetDate = new Date(deadline.split('.').reverse().join('-'));\n    const currentDate = new Date();\n    targetDate.setHours(0, 0, 0, 0);\n    currentDate.setHours(0, 0, 0, 0);\n    const diffDays = Math.ceil(Math.abs(currentDate - targetDate) / (1000 * 60 * 60 * 24));\n    isDateValid = diffDays >= 6;\n  }\n\n  const isValidItem = (columnTitle === \"Q1\" || columnTitle === \"Год\") && (typeName === \"Цель\" || typeName === \"Objectives\") &&isDateValid && archive === false;\n  if (isValidItem) {\n    filteredItems.push(item);\n  }\n}\n\n// Преобразуем отфильтрованные элементы в единый текст\nlet resultText = '';\n\nfor (const item of filteredItems) {\n  const card = item.json;\n  const identity = card.id\n  const title = card?.title || 'Без названия';\n  const statusInfo = card?.properties?.id_423362 !== undefined ? card.properties.id_423362 : 'Не указан';\n  const smile = card?.type?.letter;\n  \n  \n  let membersInfo = '';\n  if (card?.members && Array.isArray(card.members)) {\n    const membersNames = [];\n    for (const member of card.members) {\n      if (member?.type === 2) {\n        const name = member?.full_name;\n        if (name && name !== 'Нет ответственного') {\n          membersNames.push(name);\n        }\n      }\n    }\n    if (membersNames.length > 0) {\n      membersInfo = `<b>Ответсвенный:</b> ${membersNames.join(', ')}\\n`;\n    }\n  } else {\n    membersInfo = `Ответственный не назначен\\n`;\n  }\n\n  let tagsInfo = '';\n  if (card?.tags && Array.isArray(card.tags)) {\n    const tagNames = [];\n    for (const tag of card.tags) {\n      if (tag?.name) {\n        tagNames.push(tag.name);\n      }\n    }\n    if (tagNames.length > 0) {\n      tagsInfo = `Теги: ${tagNames.join(', ')}\\n`;\n    }\n  } else {\n    tagsInfo = `Теги: Нет тегов\\n`;\n  }\n\n  const deadline = card?.properties?.id_425319?.date;\n  const line = card?.lane?.title;\n  const time = card?.column?.parent?.title;\n  const type = card?.column?.title;\n  const ident = card?.id;\n\n  const idToStatus = {\n  225412: \"100% достижения\",\n  225413: \"Выполнение не полностью\",\n  225414: \"Не будет достигнута\",\n  228677: \"Цель достигнута\",\n  16182152: \"Не актуально\"\n  };\n  const prop_id = card?.properties?.id_434830;\n\n  const cardUrl = `https://uni-corp.kaiten.ru/space/385711/grid/card/${identity}?group_by=board&order_by=lane%2Ccolumn&order_direction=asc%2Casc`;\n\n  resultText += `<b>Название проекта:</b> <a href=\"${cardUrl}\">${smile}${title}</a>\\n`;\n  resultText += `<b>ID карточки проекта: </b><code>${ident}</code>\\n`;\n  resultText += `<b>Описание статуса:</b> ${statusInfo}\\n`;\n  resultText += `${membersInfo}`;\n  resultText += `<b>${tagsInfo}</b>`;\n  resultText += `<b>Прогноз достижения:</b> ${idToStatus[prop_id]}\\n`;\n  resultText += `<b>Дорожка:</b> ${line}\\n`;\n  resultText += `<b>Колонка:</b> ${time}|${type}\\n`;\n  resultText += `<b>Последнее изменение статуса:</b> ${deadline}\\n`;\n  resultText += `------------------------------------\\n`;\n}\n\nlet count = filteredItems.length;\n\n// Применяем результат к каждому элементу\nfor (const item of $input.all()) {\n  \n  item.json.result = resultText;\n  item.json.counter = count;\n}\n\nreturn $input.all();"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1456,
+        -2016
+      ],
+      "id": "d48a5b0b-5313-45a6-9373-f245dc39bf6e",
+      "name": "Проверка на изменение статуса"
+    },
+    {
+      "parameters": {
+        "chatId": "={{ $('Telegram Trigger1').item.json.callback_query.from.id }}",
+        "text": "Собираю данные",
+        "additionalFields": {
+          "appendAttribution": false
+        }
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        944,
+        -1968
+      ],
+      "id": "5f2448bf-0dea-4ecd-97a7-ac2a852b008b",
+      "name": "Собираю данные",
+      "webhookId": "1eb0a016-e61c-4a2e-ab90-d490bd6120b2",
+      "executeOnce": true,
+      "credentials": {
+        "telegramApi": {
+          "id": "0QpnzYE6bTgMsJ5Z",
+          "name": "Telegram account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "editMessageText",
+        "chatId": "={{ $('Telegram Trigger1').item.json.callback_query.from.id }}",
+        "messageId": "={{ $('Собираю данные').item.json.result.message_id }}",
+        "text": "=Вот проекты, статус которых не обновляли более 6 дней 🧐 Всего их: {{ $json.counter }}  {{ $json.result }}",
+        "additionalFields": {
+          "parse_mode": "HTML"
+        }
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        1712,
+        -2000
+      ],
+      "id": "58e77d80-eea2-4e52-a9a8-f7d20a17c2bc",
+      "name": "Отчёт",
+      "webhookId": "01d4ccf5-3d01-4003-985d-7599c7632186",
+      "credentials": {
+        "telegramApi": {
+          "id": "0QpnzYE6bTgMsJ5Z",
+          "name": "Telegram account"
+        }
+      },
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "chatId": "={{ $('Telegram Trigger1').item.json.callback_query.from.id }}",
+        "text": "=Эти проекты не имеют ответсвенного👤\nВсего их: {{ $json.counter }}\n\n{{$json.result}}",
+        "replyMarkup": "inlineKeyboard",
+        "inlineKeyboard": {
+          "rows": [
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "text": "Проекты без обновления более 6 дней",
+                    "additionalFields": {
+                      "callback_data": "Проекты без обновления более 6 дней"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "text": "Проекты без руководителей",
+                    "additionalFields": {
+                      "callback_data": "Проект без руководителя"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "text": "Проекты с плохим прогнозом достижения",
+                    "additionalFields": {
+                      "callback_data": "Проекты"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "text": "Оставить комментарий к карточке",
+                    "additionalFields": {
+                      "callback_data": "coment"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "text": "Что ты можешь?",
+                    "additionalFields": {
+                      "callback_data": "Что ты можешь?"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "additionalFields": {
+          "appendAttribution": false,
+          "parse_mode": "HTML"
+        }
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        1744,
+        -1760
+      ],
+      "id": "8dccf359-5944-4f39-9ca8-dc9f877cd1c4",
+      "name": "Отчёт1",
+      "webhookId": "1eb0a016-e61c-4a2e-ab90-d490bd6120b2",
+      "executeOnce": true,
+      "credentials": {
+        "telegramApi": {
+          "id": "0QpnzYE6bTgMsJ5Z",
+          "name": "Telegram account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "chatId": "={{ $('Telegram Trigger1').item.json.callback_query.from.id }}",
+        "text": "=Проекты, у которых прогноз достижения неудовлетворительный📉\n\n{{$json.result}}",
+        "replyMarkup": "inlineKeyboard",
+        "inlineKeyboard": {
+          "rows": [
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "text": "Проекты без обновления более 6 дней",
+                    "additionalFields": {
+                      "callback_data": "Проекты без обновления более 6 дней"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "text": "Проекты без руководителей",
+                    "additionalFields": {
+                      "callback_data": "Проект без руководителя"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "text": "Проекты с плохим прогнозом достижения",
+                    "additionalFields": {
+                      "callback_data": "Проекты"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "text": "Что ты можешь?",
+                    "additionalFields": {
+                      "callback_data": "Что ты можешь?"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "additionalFields": {
+          "appendAttribution": false,
+          "parse_mode": "HTML"
+        }
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        1968,
+        -1248
+      ],
+      "id": "0cd77506-a25a-4b16-986a-3b286fdeb50f",
+      "name": "Отчёт2",
+      "webhookId": "1eb0a016-e61c-4a2e-ab90-d490bd6120b2",
+      "executeOnce": true,
+      "credentials": {
+        "telegramApi": {
+          "id": "0QpnzYE6bTgMsJ5Z",
+          "name": "Telegram account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "chatId": "={{ $('Telegram Trigger1').item.json.callback_query.from.id }}",
+        "text": "=✅Все проекты завершатся вовремя✅",
+        "replyMarkup": "inlineKeyboard",
+        "inlineKeyboard": {
+          "rows": [
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "text": "Покажи эти проекты",
+                    "additionalFields": {
+                      "callback_data": "see"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "text": "Назад",
+                    "additionalFields": {
+                      "callback_data": "back"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "text": "Оставить комментарий к карточке",
+                    "additionalFields": {
+                      "callback_data": "coment"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "text": "Оставить комментарий к карточке",
+                    "additionalFields": {
+                      "callback_data": "coment"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "text": "Что ты умеешь?",
+                    "additionalFields": {
+                      "callback_data": "Что ты умеешь?"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "additionalFields": {
+          "appendAttribution": false,
+          "parse_mode": "HTML"
+        }
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        1968,
+        -1408
+      ],
+      "id": "f89ac433-fe09-4d35-9195-228add250ac4",
+      "name": "отчёт",
+      "webhookId": "1eb0a016-e61c-4a2e-ab90-d490bd6120b2",
+      "executeOnce": true,
+      "credentials": {
+        "telegramApi": {
+          "id": "0QpnzYE6bTgMsJ5Z",
+          "name": "Telegram account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "chatId": "={{ $('Telegram Trigger1').item.json.callback_query.from.id }}",
+        "text": "=Вот проекты c 100% статусом выполнения\nВсего их: {{ $json.counter }}\n\n{{ $json.result }}\n",
+        "replyMarkup": "inlineKeyboard",
+        "inlineKeyboard": {
+          "rows": [
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "text": "Проекты без обновления более 6 дней",
+                    "additionalFields": {
+                      "callback_data": "Проекты без обновления более 6 дней"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "text": "Проекты без руководителей",
+                    "additionalFields": {
+                      "callback_data": "Проект без руководителя"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "text": "Проекты с плохим прогнозом достижения",
+                    "additionalFields": {
+                      "callback_data": "Проекты"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "text": "Оставить комментарий к карточке",
+                    "additionalFields": {
+                      "callback_data": "coment"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "text": "Что ты можешь?",
+                    "additionalFields": {
+                      "callback_data": "Что ты можешь?"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "additionalFields": {
+          "appendAttribution": false,
+          "parse_mode": "HTML"
+        }
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        1808,
+        -1008
+      ],
+      "id": "3a0b51ae-868f-48ec-ba8d-3f9381ddbf99",
+      "name": "Отчёт3",
+      "webhookId": "1eb0a016-e61c-4a2e-ab90-d490bd6120b2",
+      "executeOnce": true,
+      "credentials": {
+        "telegramApi": {
+          "id": "0QpnzYE6bTgMsJ5Z",
+          "name": "Telegram account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "chatId": "={{ $('Telegram Trigger1').item.json.callback_query.from.id }}",
+        "text": "=Введите сначала id потом комментарий. Например:\n50040030 Проверка связи",
+        "replyMarkup": "inlineKeyboard",
+        "inlineKeyboard": {
+          "rows": [
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "text": "Назад",
+                    "additionalFields": {
+                      "callback_data": "back"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "additionalFields": {
+          "appendAttribution": false,
+          "parse_mode": "HTML"
+        }
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        1184,
+        -800
+      ],
+      "id": "72cfc244-2e70-4929-acdc-cb83c9b566da",
+      "name": "Комментарий",
+      "webhookId": "1eb0a016-e61c-4a2e-ab90-d490bd6120b2",
+      "executeOnce": true,
+      "credentials": {
+        "telegramApi": {
+          "id": "0QpnzYE6bTgMsJ5Z",
+          "name": "Telegram account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "chatId": "={{ $('Telegram Trigger1').item.json.callback_query.from.id }}",
+        "text": "=Давай продолжим\nЯ могу прислать:\n1. Cписок проектов, статуc которых не обновлялся более 6 дней\n2. Список проектов без руководителей\n3. Список проектов, у которых прогресс достежений не 100%",
+        "replyMarkup": "inlineKeyboard",
+        "inlineKeyboard": {
+          "rows": [
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "text": "Проекты без обновления более 6 дней",
+                    "additionalFields": {
+                      "callback_data": "Проекты без обновления более 6 дней"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "text": "Проект без руководителя",
+                    "additionalFields": {
+                      "callback_data": "Проект без руководителя"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "text": "Проекты с плохим прогнозом достижения",
+                    "additionalFields": {
+                      "callback_data": "Проекты"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "text": "Что ты можешь?",
+                    "additionalFields": {
+                      "callback_data": "Что ты можешь?"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "additionalFields": {
+          "appendAttribution": false,
+          "parse_mode": "HTML"
+        }
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        1184,
+        -1152
+      ],
+      "id": "25f3377d-6628-4e0a-9110-a4ab13bdbf0b",
+      "name": "Продолжение",
+      "webhookId": "1eb0a016-e61c-4a2e-ab90-d490bd6120b2",
+      "executeOnce": true,
+      "credentials": {
+        "telegramApi": {
+          "id": "0QpnzYE6bTgMsJ5Z",
+          "name": "Telegram account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "chatId": "={{ $('Telegram Trigger1').item.json.callback_query.from.id }}",
+        "text": "=Я могу прислать:\n1. Cписок проектов, статуc которых не обновлялся более 6 дней\n2. Список проектов без руководителей\n3. Список проектов, у которых прогресс достежений не 100%",
+        "replyMarkup": "inlineKeyboard",
+        "inlineKeyboard": {
+          "rows": [
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "text": "Проекты без обновления более 6 дней",
+                    "additionalFields": {
+                      "callback_data": "Проекты без обновления более 6 дней"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "text": "Проект без руководителя",
+                    "additionalFields": {
+                      "callback_data": "Проект без руководителя"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "text": "Проекты с плохим прогнозом достижения",
+                    "additionalFields": {
+                      "callback_data": "Проекты"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "text": "Что ты можешь?",
+                    "additionalFields": {
+                      "callback_data": "Что ты можешь?"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "additionalFields": {
+          "appendAttribution": false,
+          "parse_mode": "HTML"
+        }
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        1152,
+        -1616
+      ],
+      "id": "47516022-f7ef-4e9b-9dac-ffa80e73399b",
+      "name": "Что можешь",
+      "webhookId": "1eb0a016-e61c-4a2e-ab90-d490bd6120b2",
+      "executeOnce": true,
+      "credentials": {
+        "telegramApi": {
+          "id": "0QpnzYE6bTgMsJ5Z",
+          "name": "Telegram account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "chatId": "={{ $('Telegram Trigger1').item.json.message.chat.id }}",
+        "text": "=Привет {{ $json.message.chat.first_name }}✋\nЯ твой помощник по проектам в Kaiten\nВыбери действие в меню ниже, чтобы начать работать со мной👇",
+        "replyMarkup": "inlineKeyboard",
+        "inlineKeyboard": {
+          "rows": [
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "text": "Проекты без обновления более 6 дней",
+                    "additionalFields": {
+                      "callback_data": "Проекты без обновления более 6 дней"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "text": "Проект без руководителя",
+                    "additionalFields": {
+                      "callback_data": "Проект без руководителя"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "text": "Проекты с плохим прогнозом достижения",
+                    "additionalFields": {
+                      "callback_data": "Проекты"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "row": {
+                "buttons": [
+                  {
+                    "text": "Что ты можешь?",
+                    "additionalFields": {
+                      "callback_data": "Что ты можешь?"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "additionalFields": {
+          "appendAttribution": false,
+          "parse_mode": "HTML"
+        }
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        1168,
+        -1472
+      ],
+      "id": "fd3cd69e-b5b4-40a7-a964-417b2e891220",
+      "name": "Старт",
+      "webhookId": "1eb0a016-e61c-4a2e-ab90-d490bd6120b2",
+      "executeOnce": true,
+      "credentials": {
+        "telegramApi": {
+          "id": "0QpnzYE6bTgMsJ5Z",
+          "name": "Telegram account"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Switch2": {
+      "main": [
+        [
+          {
+            "node": "Собираю данные",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "HTTP Request8",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Что можешь",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Старт",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "HTTP Request12",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Продолжение",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "HTTP Request13",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Комментарий",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Code25",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request8": {
+      "main": [
+        [
+          {
+            "node": "Проверка на отсветсвенных",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request9": {
+      "main": [
+        [
+          {
+            "node": "Проверка на изменение статуса",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Telegram Trigger1": {
+      "main": [
+        [
+          {
+            "node": "Switch2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request12": {
+      "main": [
+        [
+          {
+            "node": "Code22",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code22": {
+      "main": [
+        [
+          {
+            "node": "Switch3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request13": {
+      "main": [
+        [
+          {
+            "node": "Code23",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code23": {
+      "main": [
+        [
+          {
+            "node": "Отчёт3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Switch3": {
+      "main": [
+        [
+          {
+            "node": "отчёт",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Отчёт2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code25": {
+      "main": [
+        [
+          {
+            "node": "Post comment1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Проверка на отсветсвенных": {
+      "main": [
+        [
+          {
+            "node": "Отчёт1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Проверка на изменение статуса": {
+      "main": [
+        [
+          {
+            "node": "Отчёт",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Собираю данные": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request9",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Отчёт": {
+      "main": [
+        [
+          {
+            "node": "Send a text message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "5a1b8b39-9d8a-459b-af24-157847e88fb1",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "8806b366fd0011a3fadea69e91b08c5bbddda165a4910104f13cb32806ace3eb"
+  },
+  "id": "uWK86PhlxQ7rkgVU",
+  "tags": []
+}
